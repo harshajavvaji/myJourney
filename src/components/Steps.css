@@ -1,0 +1,95 @@
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.steps-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-top: 50px; /* Adjust as needed */
+  position: relative;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+}
+
+.step-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+  position: absolute;
+  top: -40px;
+}
+
+.step-circle {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.step-label {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.line {
+  position: absolute;
+  top: 20px; /* Adjust to center the line vertically */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  z-index: 0;
+}
+
+.green .step-circle {
+  animation: blink-green 1s infinite;
+  border-color: #0f0;
+}
+
+.red .step-circle {
+  animation: blink-red 1s infinite;
+  border-color: #f00;
+}
+
+@keyframes blink-green {
+  0%, 100% {
+    border-color: #0f0;
+  }
+  50% {
+    border-color: #fff;
+  }
+}
+
+@keyframes blink-red {
+  0%, 100% {
+    border-color: #f00;
+  }
+  50% {
+    border-color: #fff;
+  }
+}
+
+.start .step-circle {
+  border-color: #ff0;
+}
+
+.finish .step-circle {
+  border-color: #000;
+}
+
+/* each row should be connected by thee same that is starting after  the start and ending before finish */
